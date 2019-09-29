@@ -1,0 +1,69 @@
+#include<vector>
+#include<iostream>
+
+using namespace std;
+
+class Solution {
+public:
+	int maxProfit(vector<int>& prices) {
+		vector<int> ep,process;
+		if (prices.empty()) return 0;
+		
+		// 横盘处理
+		process = handleLine(prices);
+		//for (vector<int>::iterator iter = prices.begin(); iter < prices.end() - 1;iter++) 
+		//{
+		//	if (*iter == *(iter + 1)) { prices.erase(iter, iter + 1);  };//iter--;
+		//}
+		
+		ep = findExtremePoint(process);
+		int ep_size = ep.size(), res = 0;
+
+		if ((ep[1] - ep[0]) > 0) {    //  先上升   0 1 2
+			for (int i = 0; i < ep_size - 1; i += 2)
+			{
+				res += ep[i + 1] - ep[i];
+			}
+		
+		}
+		else                     //  先下升   0 1 2
+		{
+			for (int i = 1; i < ep_size - 1; i += 2)
+			{
+				res += ep[i + 1] - ep[i];
+			}
+		}
+		
+		return res;
+	}
+private:
+	vector<int> findExtremePoint(vector<int>& nums)
+	{	// 找极值点 + 端点
+		vector<int> res;
+		res.push_back(nums.front());
+		for (int i = 1; i < nums.size() - 1; i++)
+		{
+			//if (nums[i] == nums[i - 1]) continue;
+			if ((nums[i-1] - nums[i]) * (nums[i] - nums[i + 1]) < 0) res.push_back(nums[i]);
+		}
+		res.push_back(nums.back());
+		return res;
+	}
+	vector<int> handleLine(vector<int>& nums) {
+		vector<int> out;
+		for (int i = 0; i < nums.size() - 1; i++) 
+		{
+			if (nums[i] == nums[i + 1]) continue;
+			out.push_back(nums[i]);
+		}
+		out.push_back(nums.back());
+		return out;
+	
+	}
+};
+int main() {
+	Solution s;
+	vector<int> nums = { 0,0,1,1,2,1,1,0 };
+	cout << s.maxProfit(nums) << endl;
+	return 0;
+}
