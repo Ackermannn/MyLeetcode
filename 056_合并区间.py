@@ -19,3 +19,4 @@ list1 = [[1,4],[2,3]]
 s=Solution()
 res = s.merge(list1)
 print(res)
+# do something .....
