@@ -2,7 +2,7 @@
 class Solution:
     
     
-    def norm_search(self, nums, target,  bias=0):   
+    def norm_search(self, nums, target,  bias=0):   # 非旋转数组的二分法查找!
         
         if nums == []: return -1    
         left = 0    
@@ -25,13 +25,13 @@ class Solution:
     
     def search0(self, nums, target, bias=0):
 
-        left = 0    
-        right = len(nums) - 1
+        left = 0    # 数组最左边的指针
+        right = len(nums) - 1  # 最右边指针
         if target == nums[left]: return 0 + bias    
         if target == nums[right]: return right + bias
         
-        if (right - left) <= 1: return -1
-        mid = (right - left) // 2 + left
+        if (right - left) <= 1: return -1 # 找不到
+        mid = (right - left) // 2 + left  # 找中间
         if target == nums[mid]: return mid + bias
         
         # 如果target 在连续段内
