@@ -9,3 +9,4 @@ class Solution:
             else:
                 m[item] += 1
         return [key for key,val in m.items() if val > n]
+# 还有改进的投票法
