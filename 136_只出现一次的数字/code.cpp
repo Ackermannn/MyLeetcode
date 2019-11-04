@@ -20,6 +20,15 @@ public:
 		}
 		
 	}
+		// 异或法 
+	int singleNumber2(vector<int>& nums)
+	{
+		int a = 0;
+		for (int i : nums) {
+			a ^= i;
+		}		
+		return a;
+	}
 };
 int main() {
 	Solution solu;
