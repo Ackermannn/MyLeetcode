@@ -1,4 +1,5 @@
 # 接雨水
+
 ## 问题
 
 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
@@ -13,7 +14,7 @@
 输出: 6
 
 来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/trapping-rain-water
+链接：<https://leetcode-cn.com/problems/trapping-rain-water>
 
 ## 思路
 
@@ -35,7 +36,7 @@ using namespace std;
 class Solution {
 public:
 	int trap(vector<int>& height) {
-		if (height.empty()) return 0;
+  	if (height.empty()) return 0;
 		stack<int> column;
 		int water = 0;
 		vector<int>::iterator biggest = max_element(height.begin(), height.end());
@@ -59,15 +60,17 @@ public:
 int main() {
 	vector<int> height = { 0,1,0,2,1,0,1,3,2,1,2,1 };
 	Solution s;
-	int water = s.trap(height);
-	cout << water << endl;
-	return 0;
+ int water = s.trap(height);
+ cout << water << endl;
+ return 0;
 }
 ```
-python版本
+
+## python代码
+
 ```python
 class Solution:
-    
+
     def trap(self,height):
         if not height: return 0
         hei_idx = height.index(max(height))
@@ -80,8 +83,8 @@ class Solution:
             if i < column: water += column - i
             else: column = i
         return water
-        
-    
+
+
 if __name__ == '__main__':
     s = Solution()
     height =  [2,1,23,1,15]
