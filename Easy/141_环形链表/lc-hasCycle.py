@@ -11,7 +11,7 @@ class ListNode:
 
 class Solution:
 
-    def hasCycle(self, head):
+    def hasCycle(self, head): # 不是空间复杂度为常量的算法
         set0 = set()
         while True:
             if head not in set0:
@@ -22,8 +22,17 @@ class Solution:
                     head = head.next
             else:
                 return True
-                    
-        
+    
+    def hasCycle2(self, head):
+        if head == None: return False
+        slow = head
+        fast = head
+        while fast.next is not None and fast.next.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast: return True
+        return False
+    
 def creatListNode(head, pos):
     '''
     description:
@@ -50,9 +59,9 @@ def creatListNode(head, pos):
     temp0.next = link
     return out_head
     
-head = []
-pos = -1
+head = [1, 5, 3, 0]
+pos = 1
 h = creatListNode(head, pos)
 
 solv = Solution()
-print(solv.hasCycle(h))
+print(solv.hasCycle2(h))
