@@ -4,40 +4,23 @@ using namespace std;
 class Solution {
 public:
 	int removeElement(vector<int>& nums, int val) {
-		
-		int i = 0, j =  0;
-		for ( ; j < nums.size(); i++) {
-			
-			while (nums[j] == val)
+		int i = 0, j;
+		for (j = 0; j < nums.size(); j++) {
+			if (nums[j] != val)
 			{
-				j++;
-				if (j < nums.size()) { 
-					nums[i] = nums[j]; 
-				}
-				else break;
+				nums[i] = nums[j];
+				i++;
 			}
-
-		
+	
 		}
 		return i;
 	}
 };
 int main() {
 	Solution solv;
-	vector<int> nums = {1};
-	int val = 1;
+	vector<int> nums = {3,2,2,3 };
+	int val = 3;
 	int ans = solv.removeElement(nums, val);
 	cout << ans << endl;
 	return 0;
 }
-
-/*
-[]
-0
-
-[1]
-1
-
-[3,3]
-3
-*/
