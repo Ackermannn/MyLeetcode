@@ -13,7 +13,7 @@ using namespace std;
 //解释 :
 //	1   (0 0 0 1)
 //	4   (0 1 0 0)
-//	↑   ↑
+//	       ↑   ↑
 //	上面的箭头指出了对应二进制位不同的位置。
 //
 //	链接：https ://leetcode-cn.com/problems/hamming-distance
