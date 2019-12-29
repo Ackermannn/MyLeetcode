@@ -15,6 +15,9 @@
 
 链接：https://leetcode-cn.com/problems/move-zeroes
 
+解法:
+
+快慢指针法, 左边一个慢指针指出0空缺, 右边一个快指针找出非零值填补空缺.
 */
 
 using std::swap;
