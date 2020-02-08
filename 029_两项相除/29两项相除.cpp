@@ -1,19 +1,18 @@
-#pragma execution_character_set("utf-8")
-#include <iostream>
+ï»¿#include <iostream>
 class Solution {
 public:
 	int positiveDiv(int dividend, int divisor) {
-		// ´Ëº¯Êı¿ÉÒÔ ³ıÊıÓë±»³ıÊı¶¼ÊÇÕıÕûÊıÊ±µÄÇé¿ö
-		int ans = 0, store_divisor = divisor; // ´¢´æ ³ıÊıÒÔ±¸µİ¹é
+		// æ­¤å‡½æ•°å¯ä»¥ é™¤æ•°ä¸è¢«é™¤æ•°éƒ½æ˜¯æ­£æ•´æ•°æ—¶çš„æƒ…å†µ
+		int ans = 0, store_divisor = divisor; // å‚¨å­˜ é™¤æ•°ä»¥å¤‡é€’å½’
 		int time = 1;
 		if (dividend < divisor) return 0;
 		while (dividend >= divisor) {
 			ans = ans + time;
 			dividend -= divisor;
-			if (time > INT_MAX / 2) break; // ·ÀÖ¹Òç³ö,´ò¶ÏÑ­»·
-			time = time + time; // ÉÌµÄÔöÖµ·­±¶
-			if (divisor > INT_MAX / 2) break; // ·ÀÖ¹Òç³ö,´ò¶ÏÑ­»·
-			divisor += divisor; // ±»¼õÊı·­±¶
+			if (time > INT_MAX / 2) break; // é˜²æ­¢æº¢å‡º,æ‰“æ–­å¾ªç¯
+			time = time + time; // å•†çš„å¢å€¼ç¿»å€
+			if (divisor > INT_MAX / 2) break; // é˜²æ­¢æº¢å‡º,æ‰“æ–­å¾ªç¯
+			divisor += divisor; // è¢«å‡æ•°ç¿»å€
 
 		}
 
@@ -23,7 +22,7 @@ public:
 	int divide(int dividend, int divisor) {
 		int ans = 0;
 		
-		// ³ıÊı ±»³ıÊı Îª INT_MIN Ê±ºòµÄ´¦Àí
+		// é™¤æ•° è¢«é™¤æ•° ä¸º INT_MIN æ—¶å€™çš„å¤„ç†
 		if (dividend == INT_MIN and divisor == INT_MIN) return 1;
 		if (divisor == INT_MIN) return 0;
 		if (dividend == INT_MIN) {
