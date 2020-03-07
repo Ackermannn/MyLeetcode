@@ -1,4 +1,6 @@
 /*
+题目地址
+https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/
  使用两个int[] 分别当 deque 与 queue
 */
 class MaxQueue {
