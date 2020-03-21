@@ -20,6 +20,7 @@ public:
         }
         return ans;
     }
+	// 递归法 dfs
     void calculateArea(vector<vector<int>>& grid, int i, int j, int* area, int& row, int& col) {
         grid[i][j] = 0;
         *area = *area + 1;
