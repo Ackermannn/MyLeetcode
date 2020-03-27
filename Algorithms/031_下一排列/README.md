@@ -20,3 +20,53 @@ https://leetcode-cn.com/problems/next-permutation/comments/6790
 然后交换a[i-1]与a[k]，然后对[i, ∞]排序即可，排序只需要首尾不停交换即可，因为已经是降序
 上面说的很抽象，还是需要拿一些例子思考才行，比如[0,5,4,3,2,1]，下一个是[1,0,2,3,4,5]
 
+# 代码
+
+```cpp
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        
+        int size = nums.size();
+        int i = size - 1;
+        for (; i > 0; i--) {
+            if (nums[i - 1] < nums[i]) { // 找到结构
+                int k = 0, distance = INT_MAX;
+                for (int j = size - 1; j >= i; j--) { // 找到最接近且大于
+                    int temp = nums[j] - nums[i - 1];
+                    if (temp > 0 && temp < distance) {
+                        distance = temp;
+                        k = j;
+                    }
+                }
+                swap(nums[i - 1], nums[k]); 
+                break;
+            }
+        }
+        sort(nums.begin() + i, nums.end());
+
+    }
+};
+int main() {
+    Solution solv;
+    vector<int> vec = { 4,2,0,2,3,2,0 };// { 1,4,3,2 };
+    solv.nextPermutation(vec);
+    
+    for (int x : vec) {
+        cout << x << ",";
+    }
+    cout << endl;
+
+    return 0;
+}
+/*
+执行结果：通过
+显示详情
+执行用时 :4 ms, 在所有 C++ 提交中击败了87.93%的用户
+内存消耗 :6.9 MB, 在所有 C++ 提交中击败了100.00%的用户
+*/
+```
