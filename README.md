@@ -1,4 +1,10 @@
 # myLeetcode
-There are my own solutions for Leetcode.
 
-主力刷 题号前200 的题目.
+
+## 力扣
+
+[力扣部分](./Algorithms)
+
+## 剑指offer
+
+[剑指offer部分](./LCOF)
