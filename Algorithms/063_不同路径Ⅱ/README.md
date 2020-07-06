@@ -6,7 +6,7 @@
 
 现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？
 
-[!Alt image](robot_maze.png)
+![image](robot_maze.png)
 
 网格中的障碍物和空位置分别用 1 和 0 来表示。
 
