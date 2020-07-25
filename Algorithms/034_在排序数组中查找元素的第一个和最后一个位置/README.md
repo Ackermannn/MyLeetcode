@@ -27,6 +27,7 @@
 
 2. 把指向第一个target的指针一直向右移动直到找到尾巴
 
+
 # 代码
 
 ## python 使用法1
@@ -54,4 +55,53 @@ vector<int> searchRange(vector<int>& nums, int target) {
       }
   }
   return ans;
+```
+
+# 第三种解法
+
+分别编写左边界二分法查找和右边界二分法查找
+
+```java
+class Solution {
+    public int[] nums;
+    int target;
+    int size;
+
+    public int[] searchRange(int[] nums, int target) {
+        this.nums = nums;
+        this.target = target;
+        this.size = nums.length;
+        int resLeft = leftBinarySearch(-1, size);
+        int resRight = rightBinarySearch(-1, size);
+        return new int[]{resLeft, resRight};
+    }
+
+    public int leftBinarySearch(int start, int end) {
+        if (start + 1 >= end) return -1;
+        int mid = (start + end) / 2;
+        if (nums[mid] < target) return leftBinarySearch(mid, end);
+        else if (target < nums[mid]) return leftBinarySearch(start, mid);
+        else  {
+            if (mid != 0) {
+                if (nums[mid] == nums[mid - 1]) {
+                    return leftBinarySearch(start, mid);
+                } else return mid;
+            } else return 0;
+        }
+    }
+
+    public int rightBinarySearch(int start, int end) {
+        if (start + 1 >= end) return -1;
+        int mid = (start + end) / 2;
+        if (nums[mid] < target) return rightBinarySearch(mid, end);
+        else if(target < nums[mid]) return rightBinarySearch(start, mid);
+        else {
+            if (mid != size - 1) {
+                if (nums[mid] == nums[mid + 1]) {
+                    return rightBinarySearch(mid, end);
+                } else return mid;
+            } else return size - 1;
+        }
+    }
+}
 ```
