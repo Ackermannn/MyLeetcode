@@ -77,16 +77,16 @@ class Solution {
     }
 
     public int leftBinarySearch(int start, int end) {
-        if (start + 1 >= end) return -1;
+        if (start + 1 >= end) return -1; 
         int mid = (start + end) / 2;
-        if (nums[mid] < target) return leftBinarySearch(mid, end);
-        else if (target < nums[mid]) return leftBinarySearch(start, mid);
+        if (nums[mid] < target) return leftBinarySearch(mid, end); // 在右边
+        else if (target < nums[mid]) return leftBinarySearch(start, mid); // 在左边
         else  {
             if (mid != 0) {
                 if (nums[mid] == nums[mid - 1]) {
-                    return leftBinarySearch(start, mid);
-                } else return mid;
-            } else return 0;
+                    return leftBinarySearch(start, mid); // 如果前一个元素与target相同 继续递归
+                } else return mid; // 如果前一个元素与target不同 正是想要的结果
+            } else return 0; // 如果第一个就是target了，直接返回0
         }
     }
 
