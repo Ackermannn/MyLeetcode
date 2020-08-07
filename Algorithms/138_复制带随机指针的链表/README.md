@@ -1,4 +1,8 @@
 
+# [Question](https://leetcode-cn.com/problems/copy-list-with-random-pointer/)
+
+# Code
+
 此解答和 [133克隆图](../133_克隆图)一个套路
 
 ```java
