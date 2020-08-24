@@ -18,15 +18,16 @@ public class BitTree {
 
     /**
      * 输入一个int数组中序遍历 生成二叉树,
-     *
+     * <p>
      * 例子：
      * Integer[] nums = {1, 2, 3, null, 5};
      * 输出：
-     *    1
-     *   / \
-     *  2   3
-     *   \
-     *    5
+     *  1
+     * / \
+     * 2   3
+     * \
+     * 5
+     *
      * @param nums 层序遍历的二叉树
      * @return
      */
@@ -60,9 +61,47 @@ public class BitTree {
         return node;
     }
 
+    /**
+     * 前序遍历
+     *
+     */
+    public static void preOrderTraverse(BitTree bitTree) {
+        if (bitTree != null) {
+            System.out.print(bitTree.val + " ");
+            preOrderTraverse(bitTree.left);
+            preOrderTraverse(bitTree.right);
+        }
+    }
+
+    /**
+     * 中序遍历
+     * @param
+     */
+    public static void inOrderTraverse(BitTree bitTree) {
+        if (bitTree != null) {
+            inOrderTraverse(bitTree.left);
+            System.out.print(bitTree.val + " ");
+            inOrderTraverse(bitTree.right);
+        }
+    }
+
+    /**
+     *  后序遍历
+     * @param
+     */
+    public static void postOrderTraverse(BitTree bitTree){
+        if (bitTree != null) {
+            postOrderTraverse(bitTree.left);
+            postOrderTraverse(bitTree.right);
+            System.out.print(bitTree.val + " ");
+        }
+    }
+
     public static void main(String[] args) {
-        Integer[] nums = {1, 3, null, 5};
-        BitTree ret = BitTree.creatABitTree(nums);
+        Integer[] nums = {1, 2, 3, 4, 5};
+        BitTree bitTree = BitTree.creatABitTree(nums);
+        BitTree.postOrderTraverse(bitTree);
+
     }
 
 }
