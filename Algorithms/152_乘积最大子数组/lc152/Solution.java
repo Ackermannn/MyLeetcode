@@ -1,7 +1,9 @@
 package lc152;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 abstract class AbstractSolution {
     abstract public int maxProduct(int[] nums);
@@ -50,11 +52,24 @@ class Main {
     public static void main(String[] args) {
 
 //        int[] nums = new int[]{2, 3, -2, 4};
-//        int[] nums = new int[]{-2,0,-1};
-        int[] nums = new int[]{};
+        int[] nums = new int[]{-2, 0, -1};
+//        int[] nums = new int[]{};
 
-//        AbstractSolution abstractSolution = new Solution();
-        AbstractSolution abstractSolution = new SolutionDP();
+
+        System.out.println("Which solution do you want?\n" +
+                "input lc152.Solution get 暴力法, input lc152.SolutionDP get 动态规划");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        AbstractSolution abstractSolution = null;
+        try {
+            abstractSolution = (AbstractSolution) Class.forName(name).getDeclaredConstructor().newInstance();
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error: 类名输入错误");
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        assert abstractSolution != null;
         int res = abstractSolution.maxProduct(nums);
         System.out.println(res);
     }
