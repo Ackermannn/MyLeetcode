@@ -1,4 +1,4 @@
-package sort_algorithm.Bubble;
+package sort_algorithm.bubble;
 
 import sort_algorithm.Sort;
 

@@ -1,4 +1,4 @@
-package sort_algorithm.SimpleSelectionSort;
+package sort_algorithm.simple_selection_sort;
 
 import sort_algorithm.Sort;
 

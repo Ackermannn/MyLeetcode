@@ -1,9 +1,7 @@
 package sort_algorithm;
 
 
-import sort_algorithm.SimpleSelectionSort.SelectSort;
-
-import java.util.Arrays;
+import sort_algorithm.simple_selection_sort.SelectSort;
 
 public class Main {
     public static void main(String[] args) {
