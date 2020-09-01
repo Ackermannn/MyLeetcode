@@ -1,20 +1,23 @@
 package sort_algorithm;
 
 
-import sort_algorithm.simple_selection_sort.SelectSort;
-import sort_algorithm.straight_insert_sort.InsertSort;
+import sort_algorithm.heap_sort.HeapSort;
 
 public class Main {
     public static void main(String[] args) {
 
-        Sort s = new InsertSort();
+        Sort s = new HeapSort();
 
-//        int[] nums = {9, 1, 5, 8, 3, 7, 4, 6, 2};
         int[] nums = {9};
+//        int[] nums = {90, 10, 50, 80, 30, 70, 40, 60, 20};
+
+        System.out.println("排序前：");
+        s.printNums(nums);
+
         s.sort(nums);
-        for (int x : nums) {
-            System.out.printf("%d ", x);
-        }
+
+        System.out.println("排序结果：");
+        s.printNums(nums);
 
 
     }

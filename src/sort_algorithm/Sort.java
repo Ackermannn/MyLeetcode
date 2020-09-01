@@ -22,4 +22,11 @@ public interface Sort {
         nums[idxA] = nums[idxB];
         nums[idxB] = temp;
     }
+
+    default void printNums(int[] nums){
+        for (int x : nums) {
+            System.out.printf("%d ", x);
+        }
+        System.out.print("\n");
+    }
 }
