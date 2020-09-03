@@ -1,10 +1,10 @@
 #include<iostream>
 #include<vector>
-#include <algorithm>
+#include<algorithm>
 using namespace std;
 class Solution {
 public:
-	// 暴力法会在力扣测试例中会超出时间限制
+	// 鏆村姏娉曚細鍦ㄥ姏鎵ｆ祴璇曚緥涓細瓒呭嚭鏃堕棿闄愬埗
 	int maxProfit_alpha(vector<int>& prices) {
 		int ans = 0;
 		for (auto i = prices.begin(); i < prices.end(); i++)
