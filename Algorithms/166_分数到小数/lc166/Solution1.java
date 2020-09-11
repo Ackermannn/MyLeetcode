@@ -3,7 +3,7 @@ package lc166;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solution1 implements Solution {
+class Solution1 implements Solution {
     /**
      * 把数折腾成正数
      */

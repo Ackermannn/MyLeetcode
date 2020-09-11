@@ -1,6 +1,6 @@
 package lc174;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         Solution solution = new Solution1();
 

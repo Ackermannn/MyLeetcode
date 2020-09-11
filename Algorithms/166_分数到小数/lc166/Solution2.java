@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 官方题解
  */
-public class Solution2 implements Solution {
+class Solution2 implements Solution {
     @Override
     public String fractionToDecimal(int numerator, int denominator) {
         if (numerator == 0) {

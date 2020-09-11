@@ -1,6 +1,6 @@
 package lc174;
 
-public class Solution1 implements Solution {
+class Solution1 implements Solution {
 
     @Override
     public int calculateMinimumHP(int[][] dungeon) {

@@ -1,6 +1,6 @@
 package lc166;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         Solution sol = new Solution1();
         int[][] test = new int[][]{
