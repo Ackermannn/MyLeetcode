@@ -1,6 +1,6 @@
 package lc200;
 
-public interface Solution {
+interface Solution {
     int numIslands(char[][] grid);
 }
 
