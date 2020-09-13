@@ -17,9 +17,8 @@ class Solution implements ISolution {
     @Override
     public int longestValidParentheses(String s) {
         int[] dp = new int[s.length() + 1]; // dp[i] 存放必须包含到i的区间最长有效括号
-        int p = 0;
         Deque<Integer> stack = new ArrayDeque<>();
-        for (; p < s.length(); p++) {
+        for (int p = 0; p < s.length(); p++) {
             if (s.charAt(p) == '(') {
                 stack.push(p);
             } else { // ')'
