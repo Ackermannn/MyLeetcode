@@ -29,9 +29,11 @@ from typing import List
 
 
 class Solution:
+    """
+    官方题解的解法一。 对字符串窗口进行一个一个的滑动，用新的List查询是否匹配
+    """
 
     def findSubstring(self, s: str, words: List[str]) -> List[int]:
-
         def isMatch():
             for j in range(0, all_len, word_len):
                 sub_sub_s = sub_s[j:j + word_len]
