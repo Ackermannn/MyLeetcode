@@ -1,5 +1,5 @@
 package lc041;
 
-public interface ISolution {
+interface ISolution {
     public int firstMissingPositive(int[] nums);
 }

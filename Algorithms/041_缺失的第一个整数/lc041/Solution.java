@@ -2,7 +2,7 @@ package lc041;
 
 import java.util.Arrays;
 
-public class Solution implements ISolution {
+class Solution implements ISolution {
     /**
      * 有排序的方法 不符合题目要求
      */
