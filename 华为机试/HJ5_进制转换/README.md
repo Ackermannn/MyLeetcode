@@ -75,8 +75,7 @@ int main(){
 ```python
 while True:
     try:
-        a = int(input(), 16)
-        print(a)
+        print(int(input(), 16))
     except:
         break
 
