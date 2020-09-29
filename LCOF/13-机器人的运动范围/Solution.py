@@ -7,13 +7,11 @@ https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/
 class Solution:
 
     def movingCount(self, m: int, n: int, k: int) -> int:
-        self.map_ = [[0 for i in range(n)] for j in range(m)]
-        # self.map_[0][0] = 0
+        self.map_ = [[0 for _ in range(n)] for _ in range(m)]
         self.k = k
         self.m = m
         self.n = n
         self.recuir(0, 0)
-        print(self.map_)
         ans = 0
         for i in self.map_:
             ans = ans + sum(i)
