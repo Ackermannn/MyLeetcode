@@ -17,7 +17,7 @@ class Solution {
 class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] ret = solution.printNumbers(3);
+        int[] ret = solution.printNumbers(6);
         for (int x : ret) {
             System.out.printf("%d,", x);
         }
