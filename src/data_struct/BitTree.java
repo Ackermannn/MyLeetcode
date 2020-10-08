@@ -6,13 +6,10 @@ import java.util.Queue;
 /**
  * 二叉树
  */
-public class BitTree {
-    public int val;
-    public BitTree left;
-    public BitTree right;
+public class BitTree extends TreeNode {
 
     public BitTree(int x) {
-        val = x;
+        super(x);
     }
 
 
@@ -36,12 +33,12 @@ public class BitTree {
         if (nums.length == 0 || nums[0] == null) return null;
         if (nums.length == 1) return new BitTree(nums[0]);
 
-        Queue<BitTree> queue = new LinkedList<>();  // 得用队列
+        Queue<TreeNode> queue = new LinkedList<>();  // 得用队列
         // 根结点的处理
         BitTree node = new BitTree(nums[0]);
         queue.offer(node);
 
-        BitTree temp;
+        TreeNode temp;
         for (int i = 1; i < nums.length; ) {
             temp = queue.poll();
             if (nums[i] != null) {
@@ -65,7 +62,7 @@ public class BitTree {
      * 前序遍历
      *
      */
-    public static void preOrderTraverse(BitTree bitTree) {
+    public static void preOrderTraverse(TreeNode bitTree) {
         if (bitTree != null) {
             System.out.print(bitTree.val + " ");
             preOrderTraverse(bitTree.left);
@@ -77,7 +74,7 @@ public class BitTree {
      * 中序遍历
      * @param
      */
-    public static void inOrderTraverse(BitTree bitTree) {
+    public static void inOrderTraverse(TreeNode bitTree) {
         if (bitTree != null) {
             inOrderTraverse(bitTree.left);
             System.out.print(bitTree.val + " ");
@@ -89,7 +86,7 @@ public class BitTree {
      *  后序遍历
      * @param
      */
-    public static void postOrderTraverse(BitTree bitTree){
+    public static void postOrderTraverse(TreeNode bitTree){
         if (bitTree != null) {
             postOrderTraverse(bitTree.left);
             postOrderTraverse(bitTree.right);
