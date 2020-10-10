@@ -1,4 +1,4 @@
-package HJ5_进制转换;
+package edu.neu.xsz.华为机试.HJ5_进制转换;
 
 
 import java.util.Scanner;

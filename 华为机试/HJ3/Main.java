@@ -1,4 +1,4 @@
-package HJ3;
+package edu.neu.xsz.华为机试.HJ3;
 /**
  * 牛客的华为机试环境要自己写输入输出
  *
