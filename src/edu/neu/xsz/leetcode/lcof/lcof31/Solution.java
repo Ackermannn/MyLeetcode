@@ -9,7 +9,7 @@ public class Solution {
         for (int i = 0; i < pushed.length; i++) {
 
             stack.push(pushed[i]);
-            while (stack.peek() == popped[j]) {
+            while (j < popped.length && !stack.isEmpty() && stack.peek() == popped[j]) {
                 stack.pop();
                 j++;
             }
