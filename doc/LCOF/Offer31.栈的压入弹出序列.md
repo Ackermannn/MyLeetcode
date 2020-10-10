@@ -62,4 +62,4 @@ public class Solution {
 
 ```
 
-仓库代码路径： src/edu/neu/xsz/leetcode/lcof/lcof31
+[仓库代码路径](../../src/edu/neu/xsz/leetcode/lcof/lcof31)
