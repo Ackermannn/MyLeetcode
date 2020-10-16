@@ -115,3 +115,5 @@ public class Solution2 {
 }
 
 ```
+
+[仓库代码路径](../../src/edu/neu/xsz/leetcode/lcof/lcof36)
