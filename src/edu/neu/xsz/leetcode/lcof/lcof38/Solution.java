@@ -1,4 +1,4 @@
-package edu.neu.xsz.leetcode.lcof.lcof40;
+package edu.neu.xsz.leetcode.lcof.lcof38;
 
 import java.util.ArrayList;
 import java.util.Arrays;
