@@ -1,9 +1,4 @@
-package edu.neu.xsz.leetcode.algorithms.lc008_atoi;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+package edu.neu.xsz.leetcode.algorithms._008_atoi;
 
 public class Solution {
     public int myAtoi(String str) {

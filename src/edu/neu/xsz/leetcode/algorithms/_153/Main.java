@@ -1,4 +1,4 @@
-package edu.neu.xsz.leetcode.algorithms.lc153;
+package edu.neu.xsz.leetcode.algorithms._153;
 
 class Main {
     public static void main(String[] args) {

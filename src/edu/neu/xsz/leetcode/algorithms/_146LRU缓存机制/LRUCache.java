@@ -1,4 +1,4 @@
-package edu.neu.xsz.leetcode.algorithms.lc146LRU缓存机制;
+package edu.neu.xsz.leetcode.algorithms._146LRU缓存机制;
 
 import java.util.ArrayDeque;
 import java.util.HashMap;

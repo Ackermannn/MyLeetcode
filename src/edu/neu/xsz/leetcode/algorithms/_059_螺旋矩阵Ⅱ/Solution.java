@@ -1,4 +1,4 @@
-package edu.neu.xsz.leetcode.algorithms.lc059_螺旋矩阵Ⅱ;
+package edu.neu.xsz.leetcode.algorithms._059_螺旋矩阵Ⅱ;
 
 import java.util.Arrays;
 

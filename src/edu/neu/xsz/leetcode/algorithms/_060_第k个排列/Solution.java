@@ -1,4 +1,4 @@
-package edu.neu.xsz.leetcode.algorithms.lc060_第k个排列;
+package edu.neu.xsz.leetcode.algorithms._060_第k个排列;
 
 import java.util.ArrayList;
 import java.util.List;
