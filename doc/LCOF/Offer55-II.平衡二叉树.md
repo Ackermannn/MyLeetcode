@@ -74,7 +74,7 @@ class Solution {
 
 ### 法二
 
-后序遍历+减树
+后序遍历+减枝
 
 ```java
 class Solution {
