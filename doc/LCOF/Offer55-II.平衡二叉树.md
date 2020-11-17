@@ -52,6 +52,8 @@
 
 ### 法一
 
+利用面试题55-I题的解答，本方法大多数人都能想到
+
 ```java
 class Solution {
 
@@ -71,6 +73,8 @@ class Solution {
 ```
 
 ### 法二
+
+后序遍历+减树
 
 ```java
 class Solution {
