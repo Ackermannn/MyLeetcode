@@ -34,3 +34,27 @@ class Solution {
     }
 }
 ```
+
+2021/3/9
+```java
+class Solution {
+    List<List<Integer>> ret = new ArrayList<>();
+
+    public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
+        dfs(root, targetSum, new ArrayList<>());
+
+        return ret;
+    }
+
+    void dfs(TreeNode root, int targetSum, List<Integer> x) {
+        if (root != null) {
+            x.add(root.val);
+            if (root.left == null && root.right == null && root.val == targetSum) ret.add(new ArrayList<>(x));
+            dfs(root.left, targetSum - root.val, x);
+            dfs(root.right, targetSum - root.val, x);
+            x.remove(x.size() - 1);
+        }
+    }
+}
+
+```
